@@ -1,0 +1,55 @@
+/* Gamli site. Colors from the Gamli brand board. */
+:root {
+  --tapestry: #A3282B; --navy: #2B3A6B; --gold: #E8A93A; --olive: #2F7D6D;
+  --sunrise: #FFC93C; --sky: #3D7BF2; --ink: #2E2346; --mute: #4B3F63;
+  --ground: #FFF3DC; --panel: #FFFFFF; --line: #EADBB8;
+  --display: "Fredoka", "Rubik", ui-rounded, system-ui, sans-serif;
+  --body: "Rubik", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 17px/1.6 var(--body); padding-inline: 20px; }
+a { color: var(--navy); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--sunrise); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.he { font-family: var(--display); direction: rtl; unicode-bidi: isolate; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; max-width: 880px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--navy); }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.brand span { font-family: var(--display); font-weight: 600; font-size: 1.35rem; }
+.top nav { display: flex; gap: 18px; font-size: .95rem; }
+.top nav a { color: var(--mute); text-decoration: none; }
+.top nav a:hover, .top nav a[aria-current="page"] { color: var(--navy); }
+
+.wrap { max-width: 880px; margin: 0 auto; }
+.narrow { max-width: 680px; margin: 0 auto; }
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; padding-block: 48px 56px; }
+.hero img { width: 160px; height: 160px; border-radius: 36px; box-shadow: 0 24px 48px -24px rgba(43, 58, 107, .55); }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); font-weight: 600; color: var(--navy); }
+.tagline { margin-top: 10px; display: flex; flex-direction: column; }
+.tagline .he { font-size: 1.7rem; font-weight: 600; color: var(--tapestry); text-align: left; }
+.tagline .en { color: var(--mute); }
+.lede { color: var(--mute); margin-top: 16px; max-width: 52ch; }
+.badge { display: inline-block; margin-top: 20px; padding: 8px 14px; border-radius: 999px; background: color-mix(in srgb, var(--sunrise) 45%, var(--panel)); font-weight: 500; font-size: .9rem; }
+
+.doc { padding-block: 32px 56px; }
+.doc h1 { font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 600; color: var(--navy); }
+.doc .meta { color: var(--mute); margin-top: 8px; font-size: .95rem; }
+.doc h2 { font-size: 1.35rem; font-weight: 600; margin-top: 36px; }
+.doc p, .doc ul { margin-top: 12px; }
+.doc ul { padding-left: 1.2em; }
+.doc li + li { margin-top: 6px; }
+.summary { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; margin-top: 24px; }
+.summary b { font-family: var(--display); font-weight: 600; }
+
+footer { border-top: 1px solid var(--line); padding-block: 24px 40px; max-width: 880px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--mute); font-size: .9rem; }
+footer nav { display: flex; gap: 18px; }
+footer a { color: var(--mute); }
+
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; gap: 20px; padding-block: 24px 40px; }
+  .hero img { width: 112px; height: 112px; border-radius: 26px; }
+}
