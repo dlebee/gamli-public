@@ -3,36 +3,430 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gamli</title>
-<meta name="description" content="Gamli: learn the aleph-bet with Gamli the camel. For kids, and fun for the grown-ups playing along. Built by David Lebee.">
+<title>Gamli: Hebrew Letters</title>
+<meta name="description" content="Learn the Hebrew aleph-bet with Gamli, a friendly camel in round glasses. Find letters, color them, catch them on boats, then read real words and sentences. Free for iPhone and iPad, with no ads and no accounts. Built by David Lebee.">
+<meta name="theme-color" content="#FFF3DC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gamli: Hebrew Letters">
+<meta property="og:description" content="Learn the aleph-bet with a camel. One letter at a time.">
+<meta property="og:url" content="https://dlebee.github.io/gamli-public/">
+<meta property="og:image" content="https://dlebee.github.io/gamli-public/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Rubik:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600&family=Nunito:wght@500;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="preload" as="image" href="assets/gamli/happy.webp" fetchpriority="high">
 </head>
-<body>
+<body class="home">
 <header class="top">
-  <a class="brand" href="./"><img src="assets/icon-256.png" alt=""><span>gamli</span></a>
-  <nav><a href="support/">Support</a><a href="privacy/">Privacy</a></nav>
+  <div class="wrap top-inner">
+    <a class="brand" href="./"><img src="assets/icon-256.png" alt="" width="42" height="42"><span>gamli</span></a>
+    <nav aria-label="Main">
+      <a class="wide" href="#watch">Watch</a>
+      <a class="wide" href="#journey">Journey</a>
+      <a class="wide" href="#games">Games</a>
+      <a class="wide" href="#grown-ups">Grown-ups</a>
+      <a class="wide" href="#faq">FAQ</a>
+      <a class="pill" href="https://apps.apple.com/app/id6821842256">Get Gamli</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
+<main>
+  <!-- Hero: Gamli on a rising sun, letter tiles drifting at three depths, dunes in front. -->
   <section class="hero">
-    <img src="assets/icon-256.png" alt="Gamli the camel, in round glasses">
-    <div>
-      <h1>gamli</h1>
-      <p class="tagline"><span class="he">אוֹת אַחַר אוֹת</span><span class="en">One letter at a time.</span></p>
-      <p class="lede">Learn the aleph-bet with Gamli, a bookish camel who brings the week's letter on his saddle blanket. Find the letter games, lots of cheering, and a graduation at every step. Made for kids, fun for the grown-ups playing along.</p>
-      <span class="badge">Coming soon to iPhone and iPad.</span>
+    <div class="drift" aria-hidden="true">
+      <span class="tile far" data-speed="-0.12" style="--x: 3%; --y: 6%; --mx: 2%; --my: 25%; --s: .8; --r: -8deg; --c: #fff;"><span><b>א</b><i>aleph</i></span></span>
+      <span class="tile" data-speed="-0.3" style="--x: 43%; --y: 3%; --mx: 80%; --my: 22%; --s: .9; --r: 6deg; --c: #FFC93C; --d: 6s;"><span><b>ב</b><i>bet</i></span></span>
+      <span class="tile near" data-speed="-0.5" style="--x: 88%; --y: 8%; --mx: 84%; --my: 46%; --s: 1.05; --r: 10deg; --c: #9BE3DC; --d: 8s; --dl: -2s;"><span><b>ג</b><i>gimel</i></span></span>
+      <span class="tile far desk" data-speed="-0.15" style="--x: 56%; --y: 70%; --s: .75; --r: -12deg; --c: #FFC2D4; --dl: -3s;"><span><b>ש</b><i>shin</i></span></span>
+      <span class="tile near desk" data-speed="-0.55" style="--x: 3%; --y: 80%; --s: 1; --r: 8deg; --c: #B9CFFB; --d: 7.5s;"><span><b>מ</b><i>mem</i></span></span>
+      <span class="tile desk" data-speed="-0.25" style="--x: 40%; --y: 84%; --s: .85; --r: -5deg; --c: #fff; --dl: -4s;"><span><b>ל</b><i>lamed</i></span></span>
+      <span class="tile far" data-speed="-0.1" style="--x: 93%; --y: 52%; --mx: 4%; --my: 47%; --s: .7; --r: -6deg; --c: #FFC93C; --dl: -1s;"><span><b>ת</b><i>tav</i></span></span>
+      <span class="tile far desk" data-speed="-0.18" style="--x: 70%; --y: 2%; --s: .65; --r: 12deg; --c: #fff; --dl: -5s;"><span><b>ו</b><i>vav</i></span></span>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-title">
+        <h1>Learn the aleph-bet with <span class="name">Gamli</span> the&nbsp;camel.</h1>
+      </div>
+
+      <div class="hero-art">
+        <div class="sun" data-speed="0.08" aria-hidden="true"></div>
+        <div class="gamli-hero" data-speed="-0.06">
+          <img src="assets/gamli/happy.webp" width="960" height="960" alt="Gamli, a fluffy one-hump camel in round glasses, wearing an embroidered saddle blanket">
+          <p class="say" aria-hidden="true"><span class="he">שָׁלוֹם! אֲנִי גַּמְלִי</span><span class="en">Hi! I'm Gamli.</span></p>
+        </div>
+      </div>
+
+      <div class="hero-body">
+        <p class="tagline duo"><span class="he">אוֹת אַחַר אוֹת</span><span class="en">One letter at a time.</span></p>
+        <p class="hero-lede">A bookish camel turns Hebrew letters into games. Find them, color them, catch them on boats, then read real words and sentences. Made for kids, fun for the grown-ups playing along.</p>
+        <div class="cta">
+          <a class="button" href="https://apps.apple.com/app/id6821842256">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+            <span class="stack"><small>Coming soon</small>to the App Store</span>
+          </a>
+          <a class="button ghost" href="#watch">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>
+            Watch Gamli
+          </a>
+        </div>
+        <p class="fine"><span class="chip">Free</span><span class="chip">iPhone and iPad</span><span class="chip">No ads, ever</span></p>
+      </div>
+    </div>
+
+    <div class="dunes" aria-hidden="true">
+      <svg data-speed="0.18" viewBox="0 0 1440 200" preserveAspectRatio="none" style="height: 92%"><path fill="#FFE2A6" d="M0 120 C 180 40 360 40 560 100 S 940 150 1120 80 S 1360 40 1440 70 V 200 H 0 Z"/></svg>
+      <svg data-speed="0.1" viewBox="0 0 1440 200" preserveAspectRatio="none" style="height: 70%"><path fill="#F9D38A" d="M0 140 C 220 70 420 110 640 140 S 1040 60 1260 110 S 1400 140 1440 130 V 200 H 0 Z"/></svg>
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" style="height: 42%"><path fill="#EFBF6A" d="M0 150 C 260 100 480 170 760 150 S 1180 110 1440 150 V 200 H 0 Z"/></svg>
+    </div>
+  </section>
+
+  <!-- Showreel. The video lives at assets/gamli-reel.mp4; until it does, the journey screenshot shows. -->
+  <section class="band band-night" id="watch">
+    <div class="stars" aria-hidden="true" data-speed="0.15"></div>
+    <div class="moon" aria-hidden="true" data-speed="0.3"></div>
+    <div class="wrap reel">
+      <div class="reel-copy reveal">
+        <p class="kicker">Watch</p>
+        <h2>Thirty seconds <em>with Gamli.</em></h2>
+        <p class="lede">Hidden letters, finger painting, sailing boats and a graduation party. Here is what a few minutes a day looks like.</p>
+        <p class="duo"><span class="he">בּוֹאוּ נְשַׂחֵק!</span><span class="en">Let's play!</span></p>
+      </div>
+      <div class="reel-stage">
+        <div class="phone" data-speed="-0.06">
+          <div class="screen">
+            <img src="assets/shots/journey.webp" alt="Maya's journey screen: the Letters phase with the letters she has collected" width="600" height="1304" loading="lazy">
+            <video muted autoplay loop playsinline preload="metadata" poster="assets/gamli-reel-poster.jpg" aria-label="Gamli app showreel: finding, coloring and catching Hebrew letters">
+              <source src="assets/gamli-reel.mp4" type="video/mp4" onerror="this.parentNode.classList.add('gone')">
+            </video>
+          </div>
+        </div>
+        <img class="peek" src="assets/gamli/face.webp" alt="" width="640" height="640" loading="lazy" data-speed="-0.2">
+        <p class="say" aria-hidden="true" data-speed="-0.3"><span class="he">כׇּל הַכָּבוֹד!</span><span class="en">Well done!</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The five phases, as a winding path. -->
+  <section class="band band-deep" id="journey">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">The journey</p>
+        <h2>Five journeys. Five graduations.</h2>
+        <p class="duo"><span class="he">צַעַד אַחַר צַעַד</span><span class="en">Step by step.</span></p>
+        <p class="lede">Gamli walks your child from their very first letter to reading whole sentences out loud, one small step at a time.</p>
+      </div>
+
+      <div class="path-wrap">
+      <svg class="path-line" viewBox="0 0 100 500" preserveAspectRatio="none" aria-hidden="true"><path d="M50 10 C 20 55 20 55 50 100 S 80 145 50 200 S 20 255 50 300 S 80 345 50 400 S 20 455 50 490"/></svg>
+      <ol class="path">
+        <li class="stop" style="--c: var(--berry); --tilt: -3deg;">
+          <div class="stop-card reveal">
+            <span class="badge" aria-hidden="true">1</span>
+            <h3>Letters <span class="duo"><span class="he">אוֹתִיּוֹת</span><span class="en">Letters</span></span></h3>
+            <p>One or two new letters a week, in an order that keeps look-alikes apart. Find them, color them, and catch them as they sail by.</p>
+          </div>
+          <div class="stop-sample reveal" aria-hidden="true"><span class="he">א ב ג</span><span class="en">aleph, bet, gimel</span></div>
+        </li>
+        <li class="stop" style="--c: var(--sky); --tilt: 3deg;">
+          <div class="stop-card reveal">
+            <span class="badge" aria-hidden="true">2</span>
+            <h3>Vowels <span class="duo"><span class="he">תְּנוּעוֹת</span><span class="en">Vowels</span></span></h3>
+            <p>Pick any letter and hear it with every vowel, then listen and find the right sound.</p>
+          </div>
+          <div class="stop-sample reveal" aria-hidden="true"><span class="he">בָּ בִּ בּוּ</span><span class="en">ba, bi, bu</span></div>
+        </li>
+        <li class="stop" style="--c: var(--oasis); --tilt: -2deg;">
+          <div class="stop-card reveal">
+            <span class="badge" aria-hidden="true">3</span>
+            <h3>Patterns <span class="duo"><span class="he">הֲבָרוֹת</span><span class="en">Syllables</span></span></h3>
+            <p>Sound out made-up syllables like ba-di and ma-lo-ka, just like the old primers.</p>
+          </div>
+          <div class="stop-sample reveal" aria-hidden="true"><span class="he">בָּדִי · מָלוֹקָה</span><span class="en">ba-di · ma-lo-ka</span></div>
+        </li>
+        <li class="stop" style="--c: var(--gold); --tilt: 2deg;">
+          <div class="stop-card reveal">
+            <span class="badge" aria-hidden="true">4</span>
+            <h3>Words <span class="duo"><span class="he">מִלִּים</span><span class="en">Words</span></span></h3>
+            <p>First real words, with pictures: dog, apple, camel, ice cream.</p>
+          </div>
+          <div class="stop-sample reveal" aria-hidden="true"><span class="he">גָּמָל · תַּפּוּחַ</span><span class="en">camel · apple</span></div>
+        </li>
+        <li class="stop" style="--c: var(--tapestry); --tilt: -3deg;">
+          <div class="stop-card reveal">
+            <span class="badge" aria-hidden="true">5</span>
+            <h3>Sentences <span class="duo"><span class="he">מִשְׁפָּטִים</span><span class="en">Sentences</span></span></h3>
+            <p>Read short sentences out loud, then hear Gamli read them back.</p>
+          </div>
+          <div class="stop-sample reveal" aria-hidden="true"><span class="he">הַתַּפּוּחַ אָדֹם.</span><span class="en">The apple is red.</span></div>
+        </li>
+      </ol>
+      </div>
+
+      <p class="graduate reveal">
+        <img src="assets/gamli/cheer.webp" alt="" width="640" height="640" loading="lazy">
+        <span><b>Every journey ends with a graduation day.</b> <span>A party, confetti, and a diploma signed by Gamli.</span></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- The games, each in a phone. -->
+  <section class="band band-sand" id="games">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">The games</p>
+        <h2>Six games. One very proud camel.</h2>
+        <p class="duo"><span class="he">מִי רוֹצֶה לְשַׂחֵק?</span><span class="en">Who wants to play?</span></p>
+      </div>
+
+      <ul class="games">
+        <li class="game reveal" style="--c: var(--berry); --tilt: -4deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/find.webp" alt="Find all the Mem: a grid of colorful letter tiles" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">אֵיפֹה הָאוֹת?</span><span class="en">Where's the letter?</span></p>
+            <h3>Find</h3>
+            <p>The week's letter hides among the tiles. Tap every one you can spot.</p>
+          </div>
+        </li>
+        <li class="game reveal" style="--c: var(--oasis); --tilt: 4deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/color.webp" alt="Color the Vav: a big letter being filled in pink" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">צְבָעִים</span><span class="en">Colors</span></p>
+            <h3>Color</h3>
+            <p>Fill in a giant letter with a finger, in any color you like.</p>
+          </div>
+        </li>
+        <li class="game reveal" style="--c: var(--sky); --tilt: -3deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/boats.webp" alt="Letters sailing on boats, to be dragged into the right bucket" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">סִירוֹת</span><span class="en">Boats</span></p>
+            <h3>Boats</h3>
+            <p>Letters sail past on little boats. Catch each one and drop it in its bucket.</p>
+          </div>
+        </li>
+        <li class="game reveal" style="--c: var(--gold); --tilt: 3deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/vowels.webp" alt="The Zayin with every vowel: zah, zee, zeh, zoh, zoo" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">צְלִילִים</span><span class="en">Sounds</span></p>
+            <h3>Vowels</h3>
+            <p>Hear a letter with every vowel, then listen and find the sound Gamli says.</p>
+          </div>
+        </li>
+        <li class="game reveal" style="--c: var(--tapestry); --tilt: -4deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/words.webp" alt="Which word is it? A picture of a dad and three Hebrew words to choose from" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">אֵיזוֹ מִלָּה?</span><span class="en">Which word?</span></p>
+            <h3>Words</h3>
+            <p>Match a picture to its word: dog, apple, camel, ice cream and more.</p>
+          </div>
+        </li>
+        <li class="game reveal" style="--c: #7A5CD6; --tilt: 4deg;">
+          <div class="game-shot"><figure class="phone" data-speed="-0.05"><div class="screen"><img src="assets/shots/sentences.webp" alt="Read it out loud: the apple is red, in Hebrew" width="600" height="1304" loading="lazy"></div></figure></div>
+          <div class="game-text">
+            <p class="duo" aria-hidden="true"><span class="he">קִרְאוּ בְּקוֹל</span><span class="en">Read it out loud</span></p>
+            <h3>Sentences</h3>
+            <p>Read a short sentence out loud, then tap to hear Gamli read it back.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="swipe-hint" aria-hidden="true">Swipe for more games →</p>
+    </div>
+  </section>
+
+  <!-- Graduation party. -->
+  <section class="band band-sky">
+    <div class="confetti" aria-hidden="true" data-speed="0.12">
+      <i style="--x: 6%; --y: 12%; --c: #FFC93C; --r: 20deg;"></i>
+      <i style="--x: 18%; --y: 78%; --c: #FF5A8A; --r: -30deg;"></i>
+      <i style="--x: 32%; --y: 8%; --c: #fff; --r: 50deg;"></i>
+      <i style="--x: 47%; --y: 90%; --c: #1FB5A8; --r: 10deg;"></i>
+      <i style="--x: 58%; --y: 14%; --c: #FF5A8A; --r: 70deg;"></i>
+      <i style="--x: 72%; --y: 6%; --c: #FFC93C; --r: -15deg;"></i>
+      <i style="--x: 86%; --y: 30%; --c: #fff; --r: 35deg;"></i>
+      <i style="--x: 94%; --y: 82%; --c: #FFC93C; --r: -45deg;"></i>
+      <i style="--x: 4%; --y: 50%; --c: #1FB5A8; --r: 60deg;"></i>
+      <i style="--x: 66%; --y: 94%; --c: #fff; --r: -20deg;"></i>
+    </div>
+    <div class="wrap party">
+      <div class="party-stage">
+        <figure class="phone" data-speed="-0.08"><div class="screen"><img src="assets/shots/graduation.webp" alt="Graduation day: a diploma for Maya, Aleph-bet graduate, signed by Gamli" width="600" height="1304" loading="lazy"></div></figure>
+        <img class="cheer" src="assets/gamli/cheer.webp" alt="" width="640" height="640" loading="lazy" data-speed="-0.22">
+      </div>
+      <div class="party-copy reveal">
+        <p class="duo"><span class="big-he">מַזָּל טוֹב!</span><span class="big-en">Congratulations!</span></p>
+        <h2>Graduation day, five times over.</h2>
+        <p class="lede">Finish a journey and Gamli throws a party, with confetti and a diploma made out to your child. Then it's on to the next one.</p>
+        <ul class="diplomas">
+          <li>Letters</li>
+          <li>Vowels</li>
+          <li>Patterns</li>
+          <li>Words</li>
+          <li>Sentences</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- For grown-ups. -->
+  <section class="band band-sand" id="grown-ups">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">For grown-ups</p>
+        <h2>Made for families. Built with care.</h2>
+        <p class="duo"><span class="he">לַהוֹרִים</span><span class="en">For parents</span></p>
+      </div>
+      <div class="grown">
+        <div class="grown-stage reveal">
+          <figure class="tablet"><img src="assets/shots/ipad-journey.webp" alt="Gamli on iPad: Maya's journey, with five phases from Letters to Sentences" width="900" height="1200" loading="lazy"></figure>
+          <img class="peek" src="assets/gamli/think.webp" alt="" width="640" height="640" loading="lazy" data-speed="-0.12">
+        </div>
+        <ul class="cards">
+          <li class="card reveal" style="--c: var(--sky);">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+            <h3>You set the pace</h3>
+            <p>Pick 1 or 2 new letters a week. Easy, common letters come first, and look-alikes like ב and כ are kept apart. Need to speed up? Unlock the next letter any time.</p>
+          </li>
+          <li class="card reveal" style="--c: var(--berry);">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></span>
+            <h3>Hebrew the way you say it</h3>
+            <p>Choose Modern Israeli, Ashkenazi, or Sephardi / Mizrahi pronunciation.</p>
+            <div class="demo" aria-hidden="true">
+              <span class="duo"><span class="he">שַׁבָּת</span><span class="en">Shabbat</span></span>
+              <span class="duo"><span class="he">שַׁבָּת</span><span class="en">Shabbos</span></span>
+            </div>
+          </li>
+          <li class="card reveal" style="--c: var(--oasis);">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 11h10M4 16h16M4 21h10"/></svg></span>
+            <h3>English under every line</h3>
+            <p>Every Hebrew line has English right under it, so grown-ups who don't read Hebrew can help too.</p>
+          </li>
+          <li class="card reveal" style="--c: var(--gold);">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M13.5 20a4 4 0 0 1 8 0"/></svg></span>
+            <h3>The whole family</h3>
+            <p>Several children on one device, each with their own name, letters and progress.</p>
+          </li>
+          <li class="card reveal" style="--c: var(--tapestry);">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <h3>A parent gate</h3>
+            <p>Settings sit behind a quick sum, so little fingers can't change them by accident.</p>
+            <div class="demo" aria-hidden="true"><span class="sum">7 + 5 = ?</span></div>
+          </li>
+          <li class="card reveal" style="--c: #7A5CD6;">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+            <h3>Nothing to sign up for</h3>
+            <p>No ads, no accounts, no in-app purchases and no tracking. Everything stays on the device. <a href="privacy/">Read the privacy policy</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band band-deep" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Questions</p>
+        <h2>Grown-up questions, answered.</h2>
+        <p class="duo"><span class="he">יֵשׁ שְׁאֵלוֹת?</span><span class="en">Any questions?</span></p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Who is Gamli for?</summary>
+          <div class="answer"><p>Young children just starting the aleph-bet, and the grown-ups who play along with them. Grown-ups learning to read Hebrew enjoy it too.</p></div>
+        </details>
+        <details>
+          <summary>I don't read Hebrew. Can I still help?</summary>
+          <div class="answer"><p>Yes. Every Hebrew line in the app has English right under it, and Gamli says the letters and words out loud, so you can learn right alongside your child.</p>
+          <p class="duo"><span class="he">אוֹת אַחַר אוֹת</span><span class="en">One letter at a time.</span></p></div>
+        </details>
+        <details>
+          <summary>Why aren't the letters in aleph-bet order?</summary>
+          <div class="answer"><p>Easy, common letters come first, and look-alikes like ב and כ are kept apart so they don't get mixed up. Between new letters, the games practice the ones already met.</p></div>
+        </details>
+        <details>
+          <summary>Which pronunciation should I pick?</summary>
+          <div class="answer"><p>Modern Israeli is how Hebrew is spoken in Israel today. Ashkenazi is traditional in many synagogues and Hebrew schools in North America and Europe (for example, "Shabbos"). Sephardi / Mizrahi keeps a deep, throaty ח and ע. You can change it any time in Grown-up settings.</p></div>
+        </details>
+        <details>
+          <summary>Can we go faster, or slower?</summary>
+          <div class="answer"><p>Yes. Open Grown-up settings (the gear on the journey screen, after a quick sum) to change the pace or unlock the next letter right away.</p></div>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <div class="answer"><p>Gamli is free, with no ads and no in-app purchases.</p></div>
+        </details>
+        <details>
+          <summary>What data does Gamli collect?</summary>
+          <div class="answer"><p>None. There are no accounts, no analytics and no tracking. Your child's name and progress stay in a small file on the device, and we never see it. The <a href="privacy/">privacy policy</a> has the details.</p></div>
+        </details>
+        <details>
+          <summary>Which devices does it run on?</summary>
+          <div class="answer"><p>Gamli is coming to iPhone and iPad.</p></div>
+        </details>
+      </div>
+      <p class="faq-more">Something else? Visit the <a href="support/">support page</a>.</p>
+    </div>
+  </section>
+
+  <!-- Outro -->
+  <section class="band band-sun outro">
+    <div class="wrap reveal">
+      <p class="duo"><span class="he">יַאלְלָה, בּוֹאוּ נִלְמַד!</span><span class="en">Come on, let's learn!</span></p>
+      <h2>Gamli is almost here.</h2>
+      <a class="button white" href="https://apps.apple.com/app/id6821842256">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+        <span class="stack"><small>Coming soon</small>to the App Store</span>
+      </a>
+      <p class="fine"><span class="chip">Free</span><span class="chip">No ads</span><span class="chip">No accounts</span><span class="chip">No tracking</span></p>
+      <img class="cheer" src="assets/gamli/cheer.webp" alt="Gamli cheering" width="640" height="640" loading="lazy">
     </div>
   </section>
 </main>
 
-<footer>
-  <span>Built by David Lebee</span>
-  <nav><a href="support/">Support</a><a href="privacy/">Privacy Policy</a></nav>
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-256.png" alt="" width="42" height="42"><span>gamli</span></a>
+    <nav aria-label="Footer"><a href="support/">Support</a><a href="privacy/">Privacy Policy</a><a href="https://apps.apple.com/app/id6821842256">App Store</a></nav>
+    <p class="credit">Built by David Lebee · © 2026</p>
+  </div>
 </footer>
+
+<script>
+  // Parallax: each [data-speed] element drifts with scroll relative to the middle of
+  // the screen. Reveals fade up once they scroll into view. Both stay off, and the
+  // reel stops autoplaying, for people who ask for less motion.
+  (() => {
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveals = [...document.querySelectorAll(".reveal")];
+    if (still) {
+      reveals.forEach(el => el.classList.add("shown"));
+      document.querySelectorAll("video[autoplay]").forEach(v => { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+      return;
+    }
+    const movers = [...document.querySelectorAll("[data-speed]")];
+    let queued = false;
+    const move = () => {
+      queued = false;
+      const mid = innerHeight / 2;
+      for (const el of reveals) {
+        if (!el.classList.contains("shown") && el.getBoundingClientRect().top < innerHeight * 0.92) el.classList.add("shown");
+      }
+      for (const el of movers) {
+        const box = el.parentElement.getBoundingClientRect();
+        if (box.bottom < -200 || box.top > innerHeight + 200) continue;
+        const off = (box.top + box.height / 2 - mid) * parseFloat(el.dataset.speed);
+        el.style.setProperty("--py", off.toFixed(1) + "px");
+      }
+    };
+    addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(move); } }, { passive: true });
+    addEventListener("resize", move);
+    move();
+  })();
+</script>
 </body>
 </html>
